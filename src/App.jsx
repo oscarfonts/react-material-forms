@@ -2,6 +2,8 @@ import React from 'react'
 import {Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Fa, Container} from 'mdbreact'
 import {BrowserRouter as Router} from 'react-router-dom'
 
+import TodoForm from './TodoForm'
+
 class App extends React.Component {
   constructor (props) {
     super(props)
@@ -20,7 +22,6 @@ class App extends React.Component {
 
   render () {
     const bgPink = {backgroundColor: '#ec407a'}
-    const container = {height: 1300}
     return (
       <div>
         <Router>
@@ -59,12 +60,15 @@ class App extends React.Component {
           </Navbar>
         </Router>
 
-        <Container style={container} className='text-center mt-5'>
+        <Container className='text-center mt-5'>
           <h2>This Navbar is fixed</h2>
           <h5>It will always stay visible on the top, even when you scroll down</h5>
           <br />
           <p>Full page intro with background image will be always display full screen mode, regardless of
             device </p>
+        </Container>
+        <Container>
+          <TodoForm />
         </Container>
       </div>
     )
