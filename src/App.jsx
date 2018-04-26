@@ -1,6 +1,6 @@
 import React from 'react'
 import {Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Container} from 'mdbreact'
-import {BrowserRouter as Router} from 'react-router-dom'
+import {HashRouter as Router} from 'react-router-dom'
 
 import Routes from './Routes'
 

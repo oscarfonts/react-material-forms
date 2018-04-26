@@ -13,10 +13,12 @@
   "author": "Oscar Fonts <oscar.fonts@geomati.co>",
   "license": "MIT",
   "dependencies": {
+    "mapbox-gl": "0.45.0-beta.1",
     "mdbreact": "4.3.0",
     "react": "16.3.2",
     "react-dom": "16.3.2",
     "react-jsonschema-form": "1.0.3",
+    "react-mapbox-gl": "3.8.0",
     "react-router-dom": "4.2.2"
   },
   "devDependencies": {
