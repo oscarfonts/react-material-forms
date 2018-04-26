@@ -18,7 +18,9 @@ class MapPage extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      angle: 0
+      angle: 0,
+      center: [2.15, 41.39],
+      zoom: [12]
     }
     this.animateMarker = this.animateMarker.bind(this)
   }
@@ -37,7 +39,7 @@ class MapPage extends React.Component {
   }
 
   render () {
-    return (<Map className='animated slideInRight map' style='https://apps.tmb.cat/sm/assets/mapboxgl/styles/positron.json' center={[2.15, 41.39]} zoom={[12]}>
+    return (<Map className='animated slideInRight map' style='https://apps.tmb.cat/sm/assets/mapboxgl/styles/positron.json' center={this.state.center} zoom={this.state.zoom}>
       <GeoJSONLayer data={geojson}
         symbolLayout={{
           'icon-image': 'TMB',
