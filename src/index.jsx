@@ -1,11 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import App from './App'
+
+import 'font-awesome/css/font-awesome.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'mdbreact/dist/css/mdb.css'
+import './index.css'
 
 const rootElement = document.createElement('div')
 document.body.appendChild(rootElement)
 
 ReactDOM.render(
-  <h1>Hello world</h1>,
+  <App />,
   rootElement
 )
 

@@ -5,7 +5,7 @@ const entryPath = path.join(__dirname, 'src')
 const outputPath = path.join(__dirname, 'dist')
 
 const htmlPlugin = new HtmlWebpackPlugin({
-  title: 'js-boilerplate'
+  title: 'react-material-forms'
 })
 
 module.exports = {
@@ -32,6 +32,14 @@ module.exports = {
       }, {
         loader: 'eslint-loader'
       }]
+    },
+    {
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader']
+    },
+    {
+      test: /\.(eot|woff|woff2|ttf|svg|png)$/,
+      loader: 'file-loader'
     }]
   },
   plugins: [htmlPlugin],
