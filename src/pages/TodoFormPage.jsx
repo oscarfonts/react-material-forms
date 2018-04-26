@@ -27,7 +27,7 @@ class TodoForm extends React.Component {
 
   render () {
     return (
-      <Form schema={this.schema}
+      <Form className='animated slideInRight' schema={this.schema}
         uiSchema={this.uiSchema}
         formData={this.formData}
         onChange={this.log('changed')}
