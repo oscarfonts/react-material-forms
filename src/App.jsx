@@ -1,8 +1,8 @@
 import React from 'react'
-import {Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Fa, Container} from 'mdbreact'
+import {Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Container} from 'mdbreact'
 import {BrowserRouter as Router} from 'react-router-dom'
 
-import TodoForm from './TodoForm'
+import Routes from './Routes'
 
 class App extends React.Component {
   constructor (props) {
@@ -23,8 +23,8 @@ class App extends React.Component {
   render () {
     const bgPink = {backgroundColor: '#ec407a'}
     return (
-      <div>
-        <Router>
+      <Router>
+        <div>
           <Navbar style={bgPink} dark expand='md' scrolling fixed='top'>
             <NavbarBrand href='/'>
               <strong>Navbar</strong>
@@ -33,44 +33,22 @@ class App extends React.Component {
             <Collapse isOpen={this.state.collapse} navbar>
               <NavbarNav left>
                 <NavItem active>
-                  <NavLink to='#'>Home</NavLink>
+                  <NavLink to='/'>Home</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink to='#'>Features</NavLink>
+                  <NavLink to='/form'>Form</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink to='#'>Pricing</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to='#'>Options</NavLink>
-                </NavItem>
-              </NavbarNav>
-              <NavbarNav right>
-                <NavItem>
-                  <NavLink to='#'><Fa icon='facebook' /></NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to='#'><Fa icon='twitter' /></NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to='#'><Fa icon='instagram' /></NavLink>
+                  <NavLink to='/map'>Map</NavLink>
                 </NavItem>
               </NavbarNav>
             </Collapse>
           </Navbar>
-        </Router>
-
-        <Container className='text-center mt-5'>
-          <h2>This Navbar is fixed</h2>
-          <h5>It will always stay visible on the top, even when you scroll down</h5>
-          <br />
-          <p>Full page intro with background image will be always display full screen mode, regardless of
-            device </p>
-        </Container>
-        <Container>
-          <TodoForm />
-        </Container>
-      </div>
+          <Container style={{marginTop: '4rem'}} className='mt-5'>
+            <Routes />
+          </Container>
+        </div>
+      </Router>
     )
   }
 }
